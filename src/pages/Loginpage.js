@@ -1,4 +1,4 @@
-import { Alert, Avatar, Grid, Paper } from "@mui/material";
+import { Avatar, Grid, Paper } from "@mui/material";
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import { useState } from "react";
@@ -24,25 +24,23 @@ const LoginPage = () => {
     }
 
     const successLogin = () => {
-     
-      if (usernameValue==="admin" && passwordValue==="admin"){
-        return setGotoMain(true)
+      if (usernameValue === "admin" && passwordValue === "admin") {
+        return setGotoMain(true);
+      } else {
+        return alert("Invalid Credentials");
       }
-      else{
-      return alert("Invalid Credentials")
-      }
-    }
+    };
     
   
 
   return (
-    
+    <div>
     <Grid>
       <Paper
         elevation={10}
         square={false}
         rounded={100}
-        style={{ padding: 40, height: "40vh", width: 350, margin: "60px auto" }}
+        style={{ padding: 40, height: 360, width: 300, margin: "60px auto"}}
       >
         <Grid align="center">
           <Avatar src="/broken-image.jpg" />
@@ -80,6 +78,7 @@ const LoginPage = () => {
         </Grid>
       </Paper>
     </Grid>
+    </div>
   );
 };
 
