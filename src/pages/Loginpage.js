@@ -1,8 +1,9 @@
-import { Avatar, Grid, Paper } from "@mui/material";
+import { Alert, Avatar, Grid, Paper } from "@mui/material";
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import { useState } from "react";
 import {Navigate} from 'react-router-dom';
+
 
 const LoginPage = () => {
 
@@ -45,7 +46,7 @@ const LoginPage = () => {
       >
         <Grid align="center">
           <Avatar src="/broken-image.jpg" />
-          <h1>Sign In</h1>
+          <h4>Sign In</h4>
           <Grid margin={"20px auto"}>
             <TextField
               id="usernameID"
@@ -54,6 +55,7 @@ const LoginPage = () => {
               fullWidth
               margin="10px"
               onChange={(e) => setUsernameValue(e.target.value)}
+              required
             />
           </Grid>
           <Grid align="center">
@@ -64,6 +66,7 @@ const LoginPage = () => {
               fullWidth
               type="password"
               onChange={(e) => setPasswordValue(e.target.value)}
+              required
             />
           </Grid>
           <Grid margin={"20px auto"}>
